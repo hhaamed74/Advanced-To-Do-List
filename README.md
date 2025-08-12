@@ -29,8 +29,8 @@ The app uses **LocalStorage** to save your tasks so they remain available even a
 ---
 
 ## 📸 Screenshots
-![App Screenshot](assets/image/screenshot1.png)
-![App Screenshot](assets/image/screenshot2.png)
+![App Screenshot](./assets/image/screenshot1.png)
+![App Screenshot](./assets/image/screenshot2.png)
 
 ---
 
