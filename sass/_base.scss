@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-family;
+  background: $color-bg;
+  color: $color-light;
+  line-height: 1.5;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1,
+h2,
+h3 {
+  color: $color-primary;
+}
+
+label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 1.5rem;
+}
+
+[type="search"] {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  background: $search-bg;
+  color: $search-text;
+  margin-bottom: 2rem;
+}

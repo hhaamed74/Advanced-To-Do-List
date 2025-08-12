@@ -1,0 +1,69 @@
+/* 🎨 Variables for Light Mode */
+:root {
+  --main-bg-color: #ffffff;
+  --main-text-color: #000000;
+  --secondary-text-color: #007bff;
+  --text-light: #333333;
+  --input-bg-color: #f0f0f0;
+  --input-border-color: #ccc;
+  --border-color: #ccc;
+  --card-bg-color: #ffffff;
+  --danger-color: #dc3545;
+  --search-bg: #f0f0f0;
+  --search-text: #000000;
+}
+
+/* 🌙 Variables for Dark Mode */
+body.dark-mode {
+  --main-bg-color: #000000;
+  --main-text-color: #00c8ff;
+  --secondary-text-color: #fff701;
+  --text-light: #ffffff;
+  --input-bg-color: #222;
+  --input-border-color: #444;
+  --border-color: #444;
+  --card-bg-color: #111;
+  --danger-color: #ff4d4d;
+  --search-bg: #222222;
+  --search-text: #ffffff;
+}
+/* 🖋 Sass Variables using CSS Variables */
+$font-family: "Mozilla Headline", sans-serif;
+$color-primary: var(--main-text-color);
+$color-secondary: var(--secondary-text-color);
+$color-bg: var(--main-bg-color);
+$color-light: var(--text-light);
+$border-color: var(--border-color);
+$card-bg: var(--card-bg-color);
+$danger-color: var(--danger-color);
+$input-bg: var(--input-bg-color);
+$search-bg: var(--search-bg);
+$search-text: var(--search-text);
+
+header,
+.card,
+.btn,
+.task-item {
+  background-color: $color-bg;
+  color: $color-primary;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 🖱 Button Style */
+.btn {
+  background-color: $color-secondary;
+  color: $color-light;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ✅ Task Title */
+.task-title {
+  font-weight: bold;
+  color: $color-primary;
+}

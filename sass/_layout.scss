@@ -1,0 +1,130 @@
+.header {
+  background: #11111100;
+  padding: 1rem 0;
+
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu-icon {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--main-text-color);
+    }
+
+    .menu-items {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .menu-items {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background: var(--main-bg-color);
+        padding: 1rem;
+        border-radius: 6px;
+        position: absolute;
+        top: 60px; /* تحت الهيدر */
+        right: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .menu-items.show {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+
+    .logo {
+      font-size: 3rem;
+      text-decoration: none;
+      flex: 1 1 auto;
+      transition: color 0.3s;
+      color: var(--secondary-text-color);
+    }
+
+    #theme-toggle {
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .header__container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo {
+        font-size: 2.5rem;
+      }
+
+      .user-status {
+        font-size: 1.8rem;
+      }
+
+      #theme-toggle {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+.app {
+  margin-top: 4rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
+
+.filters {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.tasks .task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-item {
+  @include card;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+
+  .task-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .task-meta {
+    font-size: 1.5rem;
+    color: $color-secondary;
+    margin-bottom: 1rem;
+  }
+
+  .task-actions {
+    display: flex;
+    gap: 1rem;
+  }
+}

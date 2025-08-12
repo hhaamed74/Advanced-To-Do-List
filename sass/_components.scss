@@ -1,0 +1,75 @@
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.card {
+  @include card;
+  background: $card-bg;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+
+  &.btn-primary {
+    background: $color-primary;
+    color: $color-bg;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  &.btn-secondary {
+    background: $color-secondary;
+    color: $color-bg;
+  }
+  &.btn-danger {
+    background: $danger-color;
+    color: $color-light;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 1rem;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    background: $input-bg;
+    color: $color-light;
+  }
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#filter-priority,
+#sort-by {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  background: $input-bg;
+  color: $color-light;
+}
+
+.empty-state {
+  font-size: 2rem;
+  font-weight: bold;
+}

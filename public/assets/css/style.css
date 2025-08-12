@@ -1,0 +1,320 @@
+@charset "UTF-8";
+/* 🎨 Variables for Light Mode */
+:root {
+  --main-bg-color: #ffffff;
+  --main-text-color: #000000;
+  --secondary-text-color: #007bff;
+  --text-light: #333333;
+  --input-bg-color: #f0f0f0;
+  --input-border-color: #ccc;
+  --border-color: #ccc;
+  --card-bg-color: #ffffff;
+  --danger-color: #dc3545;
+  --search-bg: #f0f0f0;
+  --search-text: #000000;
+}
+
+/* 🌙 Variables for Dark Mode */
+body.dark-mode {
+  --main-bg-color: #000000;
+  --main-text-color: #00c8ff;
+  --secondary-text-color: #fff701;
+  --text-light: #ffffff;
+  --input-bg-color: #222;
+  --input-border-color: #444;
+  --border-color: #444;
+  --card-bg-color: #111;
+  --danger-color: #ff4d4d;
+  --search-bg: #222222;
+  --search-text: #ffffff;
+}
+
+/* 🖋 Sass Variables using CSS Variables */
+header,
+.card,
+.btn,
+.task-item {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 🖱 Button Style */
+.btn {
+  background-color: var(--secondary-text-color);
+  color: var(--text-light);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ✅ Task Title */
+.task-title {
+  font-weight: bold;
+  color: var(--main-text-color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mozilla Headline", sans-serif;
+  background: var(--main-bg-color);
+  color: var(--text-light);
+  line-height: 1.5;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--main-text-color);
+}
+
+label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 1.5rem;
+}
+
+[type=search] {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--search-bg);
+  color: var(--search-text);
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.card {
+  background: var(--main-bg-color);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background: var(--card-bg-color);
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn.btn-primary {
+  background: var(--main-text-color);
+  color: var(--main-bg-color);
+  margin-top: 1rem;
+  width: 100%;
+}
+.btn.btn-secondary {
+  background: var(--secondary-text-color);
+  color: var(--main-bg-color);
+}
+.btn.btn-danger {
+  background: var(--danger-color);
+  color: var(--text-light);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.form-group label {
+  margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--input-bg-color);
+  color: var(--text-light);
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#filter-priority,
+#sort-by {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--input-bg-color);
+  color: var(--text-light);
+}
+
+.empty-state {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header {
+  background: rgba(17, 17, 17, 0);
+  padding: 1rem 0;
+}
+.header .header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header__container .menu-icon {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--main-text-color);
+}
+.header .header__container .menu-items {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .header .header__container .menu-items {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background: var(--main-bg-color);
+    padding: 1rem;
+    border-radius: 6px;
+    position: absolute;
+    top: 60px; /* تحت الهيدر */
+    right: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .header .header__container .menu-items.show {
+    display: flex;
+  }
+  .header .header__container .menu-icon {
+    display: block;
+  }
+}
+.header .header__container .logo {
+  font-size: 3rem;
+  text-decoration: none;
+  flex: 1 1 auto;
+  transition: color 0.3s;
+  color: var(--secondary-text-color);
+}
+.header .header__container #theme-toggle {
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .header .header__container .header__container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header .header__container .logo {
+    font-size: 2.5rem;
+  }
+  .header .header__container .user-status {
+    font-size: 1.8rem;
+  }
+  .header .header__container #theme-toggle {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.app {
+  margin-top: 4rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
+
+.filters {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.tasks .task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-item {
+  background: var(--main-bg-color);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+.task-item .task-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.task-item .task-meta {
+  font-size: 1.5rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 1rem;
+}
+.task-item .task-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

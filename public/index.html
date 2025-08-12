@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Advanced To-Do</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header__container">
+        <a class="logo" href="#">TaskMaster</a>
+
+        <button id="menu-toggle" class="menu-icon">☰</button>
+
+        <div id="menu-items" class="menu-items">
+          <button id="theme-toggle" class="btn btn-secondary">
+            🌙 Dark Mode
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container app">
+      <div class="layout">
+        <!-- Add Task Section -->
+        <section class="add-task">
+          <h2 class="section-title">Add Task</h2>
+          <form id="task-form" class="card" novalidate>
+            <!-- Title -->
+            <div class="form-group">
+              <label for="task-title">Title</label>
+              <input
+                id="task-title"
+                name="title"
+                type="text"
+                placeholder="Write a short title"
+                required
+              />
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+              <label for="task-desc">Description</label>
+              <textarea
+                id="task-desc"
+                name="description"
+                rows="3"
+                placeholder="Details (optional)"
+              ></textarea>
+            </div>
+
+            <!-- Due date + Priority -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="task-date">Due</label>
+                <input id="task-date" name="due" type="date" />
+              </div>
+              <div class="form-group">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority" name="priority">
+                  <option value="low">Low</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="high">High</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="form-group">
+              <label for="task-tags">Tags (comma separated)</label>
+              <input
+                id="task-tags"
+                name="tags"
+                type="text"
+                placeholder="work, urgent, shopping"
+              />
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary">Add Task</button>
+          </form>
+
+          <!-- Filters -->
+          <div class="card filters">
+            <h3 class="section-title">Filters</h3>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Search tasks..."
+            />
+            <div class="form-row">
+              <select id="filter-priority">
+                <option value="all" selected>All priorities</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+              <select id="sort-by">
+                <option value="created" selected>Sort: created</option>
+                <option value="due">Sort: due date</option>
+                <option value="priority">Sort: priority</option>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tasks List -->
+        <section class="tasks">
+          <h2 class="section-title">Tasks</h2>
+          <ul id="task-list" class="task-list"></ul>
+          <div id="empty-state" class="empty-state">
+            No tasks yet — add your first task on the left.
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Templates & Modals -->
+    <template id="task-template">
+      <li class="task-item" data-task-id="">
+        <input type="checkbox" class="task-checkbox" />
+        <div class="task-content">
+          <div class="task-header">
+            <div>
+              <div class="task-title">Task title</div>
+              <div class="task-meta">Due • Priority • tags</div>
+            </div>
+            <div class="task-actions">
+              <button class="btn btn-secondary task-edit">Edit</button>
+              <button class="btn btn-danger task-delete">Delete</button>
+            </div>
+          </div>
+        </div>
+      </li>
+    </template>
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
