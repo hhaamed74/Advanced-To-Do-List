@@ -2,7 +2,7 @@
 
 ## 📖 Description
 Advanced To-Do List is a modern and feature-rich web application designed to help you organize your daily tasks efficiently.  
-It offers task categorization, priority settings, reminders, and a responsive interface to ensure productivity on any device.  
+It offers task categorization, priority settings, and a responsive interface to ensure productivity on any device.  
 The app uses **LocalStorage** to save your tasks so they remain available even after you close your browser.
 
 ---
