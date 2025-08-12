@@ -12,8 +12,6 @@ The app uses **LocalStorage** to save your tasks so they remain available even a
 - ✏️ Edit and delete tasks.
 - ✅ Mark tasks as completed.
 - 📂 Organize tasks into categories.
-- ⏰ Set reminders for upcoming tasks.
-- 📅 Calendar integration for better scheduling.
 - 🔍 Search and filter tasks easily.
 - 💾 Local storage support (tasks are saved even after closing the browser).
 
