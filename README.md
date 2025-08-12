@@ -20,6 +20,7 @@ The app uses **LocalStorage** to save your tasks so they remain available even a
 ## 🛠️ Technologies Used
 - **HTML5**
 - **CSS3**
+- **Sass**
 - **JavaScript (ES6+)**
 - **LocalStorage API**
 - **Responsive Design**
