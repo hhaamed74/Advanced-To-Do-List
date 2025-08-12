@@ -1,5 +1,5 @@
 {
-  "name": "to-do-list",
+  "name": "advanced-to-do-list",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,9 +10,9 @@
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Hamed Abdulmohsen",
+  "license": "This project is licensed under the MIT License.",
+  "description": "A modern and feature-rich To-Do List web app with categories, priorities, reminders, and LocalStorage support.",
   "dependencies": {
     "express": "^5.1.0"
   },
